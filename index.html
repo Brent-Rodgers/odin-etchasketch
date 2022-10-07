@@ -10,8 +10,15 @@
 </head>
 <body>
     <h1>Etch-a-Sketch!</h1>
-    <label for="grid-size"> Use an N x N grid (10-100):</label>
-    <input type="number" id="grid-size" value="10" name="grid-size" min="10" max="100">
+    <div>
+        <label for="grid-size"> Grid Size (10-100):</label>
+        <input type="number" id="grid-size" value="10" name="grid-size" min="10" max="100">
+    </div>
+    <div>
+        <label for="block-color">Color: </label>
+        <input type="color" id="block-color" name="block-color"
+               value="#000000">
+    </div>
     <div id = "container">
     </div>
 </body>

@@ -1,5 +1,6 @@
-const container = document.getElementById("container")
-const gridInput = document.getElementById("grid-size")
+const container = document.getElementById("container");
+const gridInput = document.getElementById("grid-size");
+const blockColor = document.getElementById("block-color");
 
 function createGrid(numRows, numCols) {
     while (container.firstChild) {
@@ -27,7 +28,7 @@ blocks.forEach(block => addEventListener('mouseover', updateBlockColor))
 function updateBlockColor(e) {
     let item = document.elementFromPoint(e.clientX, e.clientY)
     if (item.className === "grid-item"){
-        item.setAttribute("style", "background-color: black")
+        item.setAttribute("style", "background-color: " + blockColor.value)
     }
 
     e.stopPropagation();
